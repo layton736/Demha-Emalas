@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Spieler eintragen</title>
+		<link rel="stylesheet" type="text/css" href="..\css\layout.css">
+	</head>
+	<body>
+	
+	
+	
+		<div id="wrapper">
+			<div id="layoutHome" align="center">
+					<div id="headline">Spieler anlegen</div>
+
+							<form action="http://martinakraus.net/createBookEntry.php" method="get">
+							
+								<table width="50%" cellpadding="5">		
+									<tr>
+										<td>Name</td>
+										<td><input type="text" size="20" name="name" required></td>
+									</tr>
+									<tr>
+										<td>Vorname</td>
+										<td><input type="text" size="20" name="vorname" required></td>
+									</tr>
+									<tr>
+										<td>Verein</td>
+										<td><input type="text" size="20" name="verein" required></td>
+									</tr>
+									<tr>
+										<td>Coach</td>
+										<td><input type="text" size="20" name="hcoach" required></td>
+									</tr>
+									<tr>
+										<td>Assistentcoach</td>
+										<td><input type="text" size="20" name="acoach" required></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Trikotnummer</td>
+										<td><input type="number" size="8" name="number" required></td>
+									</tr>
+									<tr>
+										<td>Jahrgang</td>
+										<td><input type="number" size="8" name="jahr" required></td>
+									</tr>
+									<tr>
+										<td>Position</td>
+										<td>	
+											<select name="position" required>
+												<option value="eBook">Center</option>
+												<option value="Newspaper">Guard</option>
+												<option value="Taschenbuch">Power Forward</option>
+												<option selected value="Lexikon">Wing</option>
+												<option value="Hardcover">Small Forward</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>Aktiv</td>
+										<td>
+											<input type="checkbox" name="aktiv" value="Ja">Ja<br>
+											<input type="checkbox" name="aktiv" value="Nein">Nein
+										</td>	
+									</tr>
+									<tr>
+										<td>Als favorit markieren</td>
+										<td><input type="checkbox"  name="favorit" ></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan ="2"><input class="submitbutton" type="submit" value="Absenden" ></td>
+									</tr>
+
+								</table>							
+								
+							</form>	
+			</div>
+		</div>
+	
+	
+	
+	
+	
+	
+	</body>
+</html>
