@@ -5,11 +5,14 @@
 		<title>Spieler Liste</title>
 		<link rel="stylesheet" type="text/css" href="../css/layout.css">
 		<link rel="stylesheet" type="text/css" href="../css/player_detail.css">
+		<script language="javascript" type="text/javascript" src=""></script>
 		<script>
 				//Ladet die erste tabelle
-			    table("..//json//db.json");
+			    table();
+				document.getElementById("all").focus();
 
-				function table(url) {
+				function table() {
+				
 					var xmlhttp = new XMLHttpRequest();
 					xmlhttp.onreadystatechange = function() {
 						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -18,7 +21,7 @@
 							createTable(myArr);
 						}
 					}
-					xmlhttp.open("GET", url, true);
+					xmlhttp.open("GET", "..//json//db.json", true);
 					xmlhttp.send();
 					//console.log(xmlhttp.responseText)
 				}
@@ -48,7 +51,7 @@
 				}				
 				
 				function templateTable(){
-					var out = "<table class='templateTable'>"+
+					var out = "<table border='1' class='templateTable'>"+
 					"<tr><th>" +
 					"Spieler" +
 					"</th><th>" +
@@ -75,14 +78,15 @@
 	<body>
 
 	<div id="wrapper">
-		<div >
-			<p id="headline">
-			Meine Spieler			
+		<div align="center">
+			<p id="headline">Meine Spieler</p>	
+			<div style ="right:100px;"id="button">
+				<input type="button" id="all"  value="Alle Spieler" onclick="table()">
+				<input type="button" id="active"  value="Meine Favoriten" onclick="table()">
+			</div>			
+			<p id="tabelle"></p>			
 		</div>
-		<div>
-			<p id="tabelle"></p>
 		
-		</div>
 	</div>
 	
 
