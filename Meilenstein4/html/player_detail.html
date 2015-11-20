@@ -5,87 +5,18 @@
 		<title>Spieler Liste</title>
 		<link rel="stylesheet" type="text/css" href="../css/layout.css">
 		<link rel="stylesheet" type="text/css" href="../css/player_detail.css">
-		<script>
-				//Ladet die erste tabelle
-			    table("..//json//db.json");
-
-				function table(url) {
-					var xmlhttp = new XMLHttpRequest();
-					xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							//console.log(xmlhttp.responseText)
-							var myArr = JSON.parse(xmlhttp.responseText);
-							createTable(myArr);
-						}
-					}
-					xmlhttp.open("GET", url, true);
-					xmlhttp.send();
-					//console.log(xmlhttp.responseText)
-				}
-				function createTable(myArr) {
-					var out = templateTable();
-					for(inhalt = 0; inhalt < myArr.length; inhalt++){
-						out += "<tr><td>" +
-						myArr[inhalt].firstname +
-						"</td><td>" +
-						myArr[inhalt].team +
-						"</td><td>" +
-						myArr[inhalt].headcoach +
-						"</td><td>" +
-						myArr[inhalt].asisstantcoach +
-						"</td><td>" +
-						myArr[inhalt].position +
-						"</td><td>" +
-						myArr[inhalt].isActive +
-						"</td><td>" +
-						myArr[inhalt].number +
-						"</td><td>" +
-						myArr[inhalt].year +
-						"</td></tr>";
-					}
-					out += "</table>";
-					document.getElementById("tabelle").innerHTML = out;
-				}				
-				
-				function templateTable(){
-					var out = "<table class='templateTable'>"+
-					"<tr><th>" +
-					"Spieler" +
-					"</th><th>" +
-					"Verein" +
-					"</th><th>" +
-					"Headcoach" +
-					"</th><th>" +
-					"Assistent" +
-					"</th><th>" +
-					"Position" +
-					"</th><th>" +
-					"Aktiv" +
-					"</th><th>" +
-					"Nummer" +
-					"</th><th>" +
-					"Jahr" +
-					"</th></tr>";
-					return out;
-				}
-		
-		
-		</script>
+		<script language="javascript" type="text/javascript" src="../js/player_detail.js"></script>
+	
 	</head>
 	<body>
 
 	<div id="wrapper">
-		<div >
-			<p id="headline">
-			Meine Spieler			
+		<div align="center">
+			<p id="headlinePlayerDetail">Meine Spieler</p>			
+			<p id="tabelle"></p>			
 		</div>
-		<div>
-			<p id="tabelle"></p>
 		
-		</div>
 	</div>
-	
-
 	
 	</body>
 
