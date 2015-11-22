@@ -1,43 +1,6 @@
-
-body{
- background-color:rgb(153,217,234);
- font-family: 'Arial Black';
+.tabelle{
 	
 }
-
-leftbox{
-	margin-top: 100px;
-	border-radius: 0px 0.5em 0.5em;
-	/*border: 1px solid;*/
-	float: left;
-}
-centerbox1{
-	margin-top: 100px;
-	border-radius: 0px 0.5em 0.5em;
-	/*border: 1px solid;*/
-	float: left;
-}
-centerbox2{
-	margin-left: 150px;
-	margin-top: 100px;
-	border-radius: 0px 0.5em 0.5em;
-	/*border: 1px solid;*/
-	float: left;
-}
-
-rightbox{
-	margin-top: 100px;
-	border-radius: 0px 0.5em 0.5em;
-	/*border: 1px solid;*/
-	float: left;
-}
-#headline{
-	
-	font-size:24;
-	position: absolute;
-	left: 40%;/* in die Mitte verschieben */
-	
-}
-div {
-	
+.tabelle td{
+	width: 100%;
 }
