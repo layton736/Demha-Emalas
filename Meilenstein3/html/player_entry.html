@@ -9,53 +9,48 @@
 	</head>
 	<body>
 		<div id="wrapper">
+			
+				<a href="home.html">Zurück zur Home Seite </a>
+			
 			<div id="layoutHome" align="center">
 				<div id="headline">Spieler anlegen</div>
 
 					<form action= "http://martinakraus.net/createPlayer.php" method="get" onsubmit ="return validationInput()">
 						
-						<table border class="tabelle"  width="50%" cellpadding="5">		
+						<table class="tabelle"  width="50%" cellpadding="5">		
 							<tr>
 								<td>Name</td>
-								<td colspan= 2><input id = "name_id" type="text" size="20" name="name" ></td>
-								<td></td>
-								<td colspan=3 style="width:100px" >Als favorit markieren</td>
-								
-								
-								
+								<td><input id = "name_id" type="text" size="20" name="name" ></td>
+								<td nowrap>Als favorit markieren</td>	
 							</tr>
 							<tr>
 								<td>Vorname</td>
-								<td colspan= 2><input id = "vorname_id" type="text" size="20" name="vorname" ></td>
-								<td colspan=2 ><input type="checkbox"  name="favorit" ></td>
+								<td><input id = "vorname_id" type="text" size="20" name="vorname" ></td>
+								<td><input type="checkbox"  name="favorit" ></td>
 							</tr>
 							<tr>
 								<td>Verein</td>
-								<td colspan= 2><input id = "verein_id" type="text" size="20" name="verein" ></td>
+								<td><input id = "verein_id" type="text" size="20" name="verein" ></td>
 							</tr>
 							<tr>
 								<td>Coach</td>
-								<td colspan= 2><input id = "hcoach_id" type="text" size="20" name="hcoach" ></td>
+								<td><input id = "hcoach_id" type="text" size="20" name="hcoach" ></td>
 							</tr>
 							<tr>
 								<td>Assistentcoach</td>
-								<td colspan= 2><input id = "acoach_id" type="text" size="20" name="acoach" ></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
+								<td><input id = "acoach_id" type="text" size="20" name="acoach" ></td>
 							</tr>
 							<tr>
 								<td>Trikotnummer</td>
-								<td colspan= 2><input id ="number_id" type="number" size="8" name="number" ></td>
+								<td><input id ="number_id" type="number" size="8" name="number" ></td>
 							</tr>
 							<tr>
 								<td>Jahrgang</td>
-								<td colspan= 2><input id ="jahr_id" type="number" size="8" name="jahr" ></td>
+								<td><input id ="jahr_id" type="number" size="8" name="jahr" ></td>
 							</tr>
 							<tr>
 								<td>Position</td>
-								<td colspan= 2>	
+								<td>	
 									<select name="position" >
 										<option value="Center">Center</option>
 										<option value="Guard">Guard</option>
@@ -69,17 +64,15 @@
 								<td>Aktiv</td>
 								<td>
 									<input type="checkbox" name="aktiv" value="Ja">Ja
-								</td>
-								<td>	
 									<input type="checkbox" name="aktiv" value="Nein">Nein
-								</td>	
+								</td>
 							</tr>
 							<tr>
 								<td height="50"></td>
 								<td></td>
 							</tr>
-							<tr>
-								<td align="right" colspan =3><input class="submitbutton" type="submit" value="Absenden" ></td>
+							<tr align="center">
+								<td colspan="4"><input class="submitbutton" type="submit" value="Absenden" ></td>
 							</tr>
 						</table>							
 						
