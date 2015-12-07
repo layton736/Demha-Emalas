@@ -1,0 +1,49 @@
+.templateTable {
+    border-top: 10px;
+    display: inline-block; 
+    border-collapse: collapse;
+    margin-left: 3%;
+	margin-right: 3%;
+}
+.templateTable  tr {
+    border: 2px solid;
+    border-color: rgb(0,0,0);
+}
+.templateTable td{
+    border: 2px solid;
+    border-color: rgb(0,0,0);
+	width: 100px;
+}
+input {
+    width: 100%;
+}
+.tableHeadline{
+	font-size: 14px;	
+	text-align: left;
+}
+#headlinePlayerDetail{
+	font-size:24px;
+	padding : 30px;
+	color : rgb(75,47,37);
+}
+.content{
+	font-size:12px;
+	text-align: left;
+}
+#button{
+    margin-left: 18%;
+    margin-bottom: 5%;
+}
+#button input{
+    float:left;
+    font-size: 20px;
+    background: rgb(153, 217, 232); 
+	margin:0px;
+	padding:0px;
+	border : 0px;
+}
+#button input:focus{
+    background: rgb(0,38,255); 
+	color:white;
+	
+}
