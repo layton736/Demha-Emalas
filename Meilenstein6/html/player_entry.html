@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<meta charset="utf-8">
+		<title>Spieler eintragen</title>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/layout.css">
+		<link rel="stylesheet" type="text/css" href="../css/player_entry.css">
+		<script language="javascript" type="text/javascript" src="../js/player_entry.js"></script>
+		
+	</head>
+	<body>
+		<div id="wrapper">
+			
+				<a href="home.html">Zurück zur Home Seite </a>
+			
+			<div id="layoutHome" align="center">
+				<div id="headline">Spieler anlegen</div>
+
+					<form  >
+						
+						<table class="tabelle"  width="50%" cellpadding="5">		
+							<tr>
+								<td>Name</td>
+								<td><input id = "name_id" type="text" size="20" name="name" ></td>
+								<td nowrap>Als favorit markieren</td>	
+							</tr>
+							<tr>
+								<td>Vorname</td>
+								<td><input id = "vorname_id" type="text" size="20" name="vorname" ></td>
+								<td><input id="favo_id" type="checkbox"  name="favorit" ></td>
+							</tr>
+							<tr>
+								<td>Verein</td>
+								<td><input id = "verein_id" type="text" size="20" name="verein" ></td>
+							</tr>
+							<tr>
+								<td>Coach</td>
+								<td><input id = "hcoach_id" type="text" size="20" name="hcoach" ></td>
+							</tr>
+							<tr>
+								<td>Assistentcoach</td>
+								<td><input id = "acoach_id" type="text" size="20" name="acoach" ></td>
+							</tr>
+							<tr>
+								<td>Trikotnummer</td>
+								<td><input id ="number_id" type="number" size="8" name="number" ></td>
+							</tr>
+							<tr>
+								<td>Jahrgang</td>
+								<td><input id ="jahr_id" type="number" size="8" name="jahr" ></td>
+							</tr>
+							<tr>
+								<td>Position</td>
+								<td>	
+									<select id="pos_id" name="position" >
+										<option value="Center">Center</option>
+										<option value="Guard">Guard</option>
+										<option value="Power Forward">Power Forward</option>
+										<option selected value="Wing">Wing</option>
+										<option value="Small Forward">Small Forward</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Aktiv</td>
+								<td>
+									<input id="ac_id" type="checkbox" name="aktiv" value="Ja">Ja
+									<input id="ac_id" type="checkbox" name="aktiv" value="Nein">Nein
+								</td>
+							</tr>
+							<tr>
+								<td height="50"></td>
+								<td></td>
+							</tr>
+							<tr align="center">
+								<td colspan="4"><input  class="submitbutton" onclick="sendExpress()" type="button" value="Absenden" ></td>
+							</tr>
+						</table>							
+						
+					</form>	
+			</div>
+		</div>
+	</body>
+
+</html>
