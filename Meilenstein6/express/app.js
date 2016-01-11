@@ -5,11 +5,7 @@ var bodyParser = require('body-parser');
 var cors = require("cors");
 app.use(cors());
 app.use(bodyParser.json());
-app.configure(function() {
-	app.use(express.bodyParser());
-	app.use(app.router);
 
-});
 // Filtert JSON datei nach favoriten
 function filter(arr) {
 	var newArr = [];
@@ -28,6 +24,9 @@ var parser = function(form) {
 			+ " " + form.number;
 };
 
+app.get('/', function(req, res) {
+	res.send("Eintrag erfolgreich");
+});
 // Bekommt die anfrage
 app.put('/Player', function(req, res) {
 	var string = "";
@@ -36,6 +35,7 @@ app.put('/Player', function(req, res) {
 		if (err) {
 			return console.log(err);
 		}
+		console.log("Erfolg");
 	});
 });
 app.get('/AllPlayer', function(req, res) {
