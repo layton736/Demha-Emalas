@@ -14,14 +14,9 @@ function sendExpress() {
 
 	if (validationInput()) {
 
-		var active = document.getElementById("ac_id").value;
-		var favo = document.getElementById("favo_id").value;
-
-		$.ajax({
-			url : 'http://127.0.0.1:8080/Player',
-			type : 'PUT',
-			contentType : 'application/json',
-			data : JSON.stringify({
+	var active = document.getElementById("ac_id").value;
+	var favo = document.getElementById("favo_id").value;
+	var obj ={
 				"isActive" : active,
 				"IsFavorite" : favo,
 				"year" : document.getElementById("jahr_id").value,
@@ -31,12 +26,24 @@ function sendExpress() {
 				"headcoach" : document.getElementById("hcoach_id").value,
 				"asisstantcoach" : document.getElementById("acoach_id").value,
 				"team" : document.getElementById("verein_id").value,
-				"position" : document.getElementById("pos_id").value
-			})
+				"position" : document.getElementById("pos_id").value,
+			};
+		
+		
+console.log(obj.year);
+
+	
+		
+		jQuery.ajax({
+			url : 'http://127.0.0.1:8080/Player',
+			type : 'PUT',
+			async: false,
+	//		contentType : 'application/json',
+			data : obj,
 		});
 
-			//document.location.href = "http://127.0.0.1:8080/";
-			alert("Versendet");
+			// document.location.href = "http://127.0.0.1:8080/";
+		
 	}
 
 }

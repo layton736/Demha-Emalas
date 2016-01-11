@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var cors = require("cors");
 app.use(cors());
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 // Filtert JSON datei nach favoriten
@@ -17,11 +18,11 @@ function filter(arr) {
 	}
 	return newArr;
 }
-var parser = function(form) {
+var parser = function(arr) {
 
-	return form.firstname + " " + form.surname + " " + form.year + " "
-			+ form.headcoach + " " + form.asisstantcoach + " " + form.position
-			+ " " + form.number;
+	return arr.firstname + " " + arr.surname + " " + arr.year + " "
+			+ arr.headcoach + " " + arr.asisstantcoach + " " + arr.position
+			+ " " + arr.number;
 };
 
 app.get('/', function(req, res) {
@@ -30,6 +31,7 @@ app.get('/', function(req, res) {
 // Bekommt die anfrage
 app.put('/Player', function(req, res) {
 	var string = "";
+	
 	string = parser(req.body);
 	fs.appendFile("../text/player_data.txt", string + "\r\n", function(err) {
 		if (err) {
