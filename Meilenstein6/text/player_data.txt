@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 hhh hhhh 76 hkhkil ohol Wing 5
 hhhkkk hhhh 76 hkhkil ohol Wing 5
 hhhkkk hhhh 76 hkhkil ohol Wing 5
 hhhkkk hhhh 76 hkhkil ohol Wing 5
 hhhkkk hhhh 76 hkhkil ohol Wing 8
+=======
+
+>>>>>>> origin/master
